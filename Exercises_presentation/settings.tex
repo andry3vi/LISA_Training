@@ -1,0 +1,113 @@
+%
+%Setting file
+%
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[english]{babel}
+
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[absolute,overlay]{textpos}
+
+\usetheme{default}
+\usefonttheme{structurebold}
+
+
+% ---------------------------------
+% color definitions
+\usepackage{color}
+\definecolor{LISA_BLUE}{cmyk}{0.99,0.88,0.29,0.18}
+\setbeamercolor{normal text}{fg=LISA_BLUE}
+\setbeamercolor{frametitle}{fg=LISA_BLUE}
+
+\colorlet{itemizecolor}{red}
+
+\newcommand\insertlocation{}  % Empty by default.
+\newcommand\location[1]{\renewcommand\insertlocation{#1}}
+
+\newcommand\insertperiod{}  % Empty by default.
+\newcommand\period[1]{\renewcommand\insertperiod{#1}}
+
+
+
+\setbeamertemplate{itemize items}[circle]
+\setbeamercolor{title}{fg=white}
+
+\setbeamertemplate{title page}
+{
+	\begin{textblock*}{0.6\paperwidth}(0.05\paperwidth,0.25\paperheight)
+         
+
+      \usebeamerfont{title}\textcolor{white}{\inserttitle}%
+      \ifx\insertsubtitle\@empty%
+      \else%
+        \vskip0.25em%
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+      \fi%     
+
+      \vspace{0.1\textheight}      
+      \usebeamerfont{author}\textcolor{white}{\insertauthor}
+      \vskip0.25em%
+      \usebeamerfont{institute}\textcolor{white}{\insertinstitute}
+
+  \end{textblock*}
+  
+}
+
+\makeatletter
+    \newenvironment{SectionTitle}{
+        % \setbeamertemplate{headline}[default]
+        \setbeamercolor{normal text}{fg=LISA_BLUE}
+        \setbeamercolor{frametitle}{fg=LISA_BLUE}
+        \setbeamercolor{title}{fg=LISA_BLUE}
+        \setbeamercolor{normal text}{fg=LISA_BLUE}
+        \usebeamercolor[fg]{normal text}
+        \usebeamercolor[fg]{footline}
+        \usebackgroundtemplate%
+        {%
+            \includegraphics[width=\paperwidth,height=\paperheight]{Section.pdf}%
+        }
+
+    }{}
+\makeatother
+
+\useoutertheme{smoothbars} 
+\setbeamertemplate{footline}[frame number]{}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+
+
+\usebackgroundtemplate%
+{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{Slide.pdf}%
+}
+
+
+\setbeamertemplate{footline}
+{
+ \begin{beamercolorbox}[wd=\paperwidth, ht=0.05\paperheight, dp=5.2pt,leftskip=2cm,rightskip=.3cm]{section in head/foot}
+ \hspace{0.095cm}\textcolor{white}{\insertdate \hfill  \insertframenumber}\phantom{x}\vskip2pt
+ \end{beamercolorbox}%
+}
+
+\makeatletter
+\setbeamertemplate{frametitle}{
+  \vspace{0.05\textheight}
+  \begin{beamercolorbox}[center]{frametitle}
+      \usebeamerfont{frametitle} \insertframetitle%
+  \end{beamercolorbox}%
+}
+\makeatother
+% \beamertemplatenavigationsymbolsempty
+% \setbeamercovered{transparent}
+
+\setbeamertemplate{headline}
+{%
+
+}

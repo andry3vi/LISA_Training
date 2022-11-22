@@ -1,0 +1,72 @@
+%Title: Beamer Presentation Template
+%Author: LISA
+%Year: 2020
+
+\documentclass[10pt,aspectratio=169]{beamer}
+ 
+\input{settings}
+
+%-----------------------------------------Title page settings-----------------------------------------%
+\title{ LISA Specialized Training~4}
+\subtitle{\small Advanced Computational techniques}
+\author{\small J. Warbinek$^{1,2}$, L. Reed$^{3}$, A. Raggio$^{4}$}
+\institute{\tiny
+	$^{1}$GSI Helmholtzzentrum für Schwerionenforschung, Darmstadt, Germany\\
+	$^{2}$Helmoltz Institute Mainz, Mainz, Germany\\
+	$^{3}$Department Chemie - Standort TRIGA, Johannes Gutenberg - Universit\"{a}t Mainz, Germany\\
+	$^{4}$Department of Physics, University of Jyv\"{a}skyl\"{a}, Finland\\
+		
+
+}
+% \period{Month-20XX}
+% \location{Event}
+
+
+%-----------------------------------------Title page settings-----------------------------------------%
+
+
+\begin{document}
+
+{
+  \usebackgroundtemplate{\includegraphics[width=\paperwidth]{Title.pdf}}
+	\begin{frame}[noframenumbering, plain]
+		\titlepage
+	\end{frame}
+}
+
+\begin{SectionTitle}
+\begin{frame}
+	\begin{textblock*}{0.5\paperwidth}(0.25\paperwidth,0.25\paperheight)
+		\centering
+		\textbf{\LARGE Nuclear DFT\\ {\large Shapes and radii}}
+	\end{textblock*}
+	\begin{textblock*}{0.5\paperwidth}(0.25\paperwidth,0.5\paperheight)
+		\centering
+		\includegraphics[width=.8\textwidth]{Shapes.pdf}
+	\end{textblock*}
+
+\end{frame}
+\end{SectionTitle}
+
+\begin{frame}{SLIDE 1}
+	An empty fancy slide.
+\end{frame}
+
+\begin{frame}{SLIDE 2}
+	An empty fancy slide.
+\end{frame}
+
+\begin{SectionTitle}
+	\begin{frame}
+		\begin{textblock*}{0.5\paperwidth}(0.25\paperwidth,0.25\paperheight)
+			\centering
+			\textbf{\LARGE Ion Beam Simulation}
+		\end{textblock*}
+		\begin{textblock*}{0.5\paperwidth}(0.25\paperwidth,0.4\paperheight)
+			\centering
+			\includegraphics[width=.8\textwidth]{ibs_logo.pdf}
+		\end{textblock*}
+	
+	\end{frame}
+	\end{SectionTitle}
+\end{document}
