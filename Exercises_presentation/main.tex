@@ -50,13 +50,129 @@
 \end{frame}
 \end{SectionTitle}
 
-\begin{frame}{SLIDE 1}
-	An empty fancy slide.
+\begin{frame}{Setting up the calculations}
+sdjkghjeofds
 \end{frame}
 
-\begin{frame}{SLIDE 2}
-	An empty fancy slide.
+\begin{frame}{$^{238}$U EV8 calculations - Iterations}
+    \centering 
+    \begin{textblock*}{0.5\paperwidth}(0.\paperwidth,0.2\paperheight)
+        \centering
+        \includegraphics[width=1.1\textwidth]{iteration.pdf}
+    \end{textblock*}
+    \begin{textblock*}{0.5\paperwidth}(0.48\paperwidth,0.2\paperheight)
+        \centering
+        \includegraphics[width=1.1\textwidth]{iterationB20.pdf}
+    \end{textblock*}
+    \begin{textblock*}{0.8\paperwidth}(0.1\paperwidth,0.8\paperheight)
+        \centering
+        After few 100s iteration the calculations start to converge. All following plots are obtained with 500 iterations calculations.
+    \end{textblock*}
 \end{frame}
+
+\begin{frame}{Binding energies}
+
+    \centering 
+    \begin{textblock*}{0.8\paperwidth}(0.1\paperwidth,0.22\paperheight)
+        \centering
+        Binding energy difference between prolate and oblate deformations
+    \end{textblock*}
+    \begin{textblock*}{0.5\paperwidth}(0.\paperwidth,0.25\paperheight)
+        \centering
+        \includegraphics[width=1.1\textwidth]{bindingenergies.pdf}
+    \end{textblock*}
+    \begin{textblock*}{0.45\paperwidth}(0.5\paperwidth,0.35\paperheight)
+        % \centering
+        \only<1>{
+            \centering
+            \textbf{Prolate}\\
+            Binding energy = 7520.3 [keV/A]\\
+            \textbf{Oblate}\\
+            Binding energy = 7474.9 [keV/A]\\
+            \textbf{Experiment}\\
+            Binding energy = 7570.126(6) [keV/A]
+        }
+        \only<2>{
+            \begin{itemize}
+                \item Positive difference means that the prolate configuration is preferred with respect to the oblate one.
+                \item At N=126 and N=174 the difference between the two configuration is smaller, this is because we are approaching neutron magic numbers, where the nuclues is supposed to be spherical.
+            \end{itemize}
+        }
+    \end{textblock*}
+\end{frame}
+
+\begin{frame}{RMS and isotopes shift}
+
+    \centering 
+
+    \begin{textblock*}{0.5\paperwidth}(0.\paperwidth,0.2\paperheight)
+        \centering
+        \includegraphics[width=1.1\textwidth]{rms.pdf}
+    \end{textblock*}
+    \begin{textblock*}{0.5\paperwidth}(0.48\paperwidth,0.2\paperheight)
+        \centering
+        \includegraphics[width=1.1\textwidth]{ms.pdf}
+    \end{textblock*}
+    \begin{textblock*}{0.8\paperwidth}(0.1\paperwidth,0.8\paperheight)
+        % \centering
+        Proton finite size not considered, which explain why the computed rms is lower than the experimental value
+    \end{textblock*}
+\end{frame}
+
+
+\begin{frame}{Quadrupole and higher order deformations}
+
+    \centering 
+    \begin{textblock*}{0.5\paperwidth}(0.\paperwidth,0.2\paperheight)
+        \centering
+        \includegraphics[width=1.1\textwidth]{beta.pdf}
+    \end{textblock*}
+    \begin{textblock*}{0.5\paperwidth}(0.48\paperwidth,0.2\paperheight)
+        % \centering
+        \only<1>{
+            \centering
+            \vspace{0.2\textheight}
+            \begin{itemize}
+                \item Quadrupole deformation is well reproduced by the calculations
+                \item $\beta_{40}$ and $\beta_{60}$ contribute in theory but $\beta_{20}$ dominate the rms in practice.
+            \end{itemize}
+        }
+        \only<2>{
+            \centering
+            \includegraphics[width=1.1\textwidth]{beta_comp.pdf}
+        }
+
+    \end{textblock*}
+\end{frame}
+
+
+\begin{frame}{Neutron skin}
+
+    \centering 
+    \begin{textblock*}{0.5\paperwidth}(0.\paperwidth,0.3\paperheight)
+        \centering
+        \includegraphics[width=1.1\textwidth]{skin.pdf}
+    \end{textblock*}
+    \begin{textblock*}{0.5\paperwidth}(0.48\paperwidth,0.3\paperheight)
+        \centering
+        \includegraphics[width=1.1\textwidth]{totalrms.pdf}
+    \end{textblock*}
+    \begin{textblock*}{0.6\paperwidth}(0.2\paperwidth,0.25\paperheight)
+            Neutron skin increasing for neutron rich nuclei
+    \end{textblock*}
+
+\end{frame}
+
+\begin{frame}{rms for prolate and oblate configurations}
+
+    \centering 
+    \begin{textblock*}{0.8\paperwidth}(0.1\paperwidth,0.1\paperheight)
+        \centering
+        \includegraphics[width=1.\textwidth]{rms_comparison.pdf}
+    \end{textblock*}
+
+\end{frame}
+
 
 \begin{SectionTitle}
 	\begin{frame}
@@ -68,7 +184,6 @@
 			\centering
 			\includegraphics[width=.8\textwidth]{ibs_logo.pdf}
 		\end{textblock*}
-	
 	\end{frame}
  \end{SectionTitle}
 
@@ -86,7 +201,7 @@
     \end{textblock*}
     \begin{textblock*}{0.5\paperwidth}(0.02\paperwidth,0.3\paperheight)
 			\centering
-			\includegraphics[width=.9\textwidth]{Exercises_presentation/images/SimionScreenshot.png}
+			\includegraphics[width=.9\textwidth]{SimionScreenshot.png}
 		\end{textblock*}
   
 \end{frame}
@@ -120,14 +235,14 @@
 \begin{frame}{Extraction of Transfer Matrix Elements $a_{ij}$}
     \begin{textblock*}{0.5\paperwidth}(0.02\paperwidth,0.25\paperheight)
 			\centering
-			\includegraphics[width=.9\textwidth]{Exercises_presentation/images/FirstCoord_Eq.pdf}
+			\includegraphics[width=.9\textwidth]{FirstCoord_Eq.pdf}
             \begin{equation*}
                 \frac{x_f}{x_i'} = a_{11}\frac{x_i}{x_i'} + a_{12}
             \end{equation*}
 		\end{textblock*}
     \begin{textblock*}{0.5\paperwidth}(0.52\paperwidth,0.25\paperheight)
 			\centering
-			\includegraphics[width=.9\textwidth]{Exercises_presentation/images/SecondCoord_Eq.pdf}
+			\includegraphics[width=.9\textwidth]{SecondCoord_Eq.pdf}
             \begin{equation*}
                 \frac{x_f'}{x_i} = a_{22}\frac{x_i'}{x_i} + a_{12}
             \end{equation*}
@@ -155,7 +270,7 @@
     \end{textblock*}
     \begin{textblock*}{0.5\paperwidth}(0.\paperwidth,0.35\paperheight)
 		\centering
-		\includegraphics[width=.8\textwidth]{Exercises_presentation/images/ibs_logo_2.pdf}
+		\includegraphics[width=.8\textwidth]{ibs_logo_2.pdf}
 	\end{textblock*}
 
 \end{frame}
@@ -175,14 +290,14 @@
         Multiplying with $M_\text{drift  }^{-1}$ from both sides yields: 
 
         \begin{equation*}
-            M_\text{gap  } = \begin{pmatrix} 1.022 & 86.310  \\ \approx 0 & 0.707 \end{pmatrix}
+            M_\text{gap  } = \begin{pmatrix} 1.022 & -86.310  \\ \approx 0 & 0.707 \end{pmatrix}
         \end{equation*}
 
             
     \end{textblock*}
     \begin{textblock*}{0.5\paperwidth}(0.\paperwidth,0.35\paperheight)
 		\centering
-		\includegraphics[width=.8\textwidth]{Exercises_presentation/images/ibs_logo.pdf}
+		\includegraphics[width=.8\textwidth]{ibs_logo.pdf}
 	\end{textblock*}
   
 
