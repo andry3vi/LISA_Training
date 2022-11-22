@@ -3,6 +3,8 @@
 %Year: 2020
 
 \documentclass[10pt,aspectratio=169]{beamer}
+
+ 
  
 \input{settings}
 
@@ -68,5 +70,122 @@
 		\end{textblock*}
 	
 	\end{frame}
-	\end{SectionTitle}
+ \end{SectionTitle}
+
+
+\begin{frame}{SIMION Simulations}
+    \begin{textblock*}{0.5\paperwidth}(0.5\paperwidth,0.4\paperheight)
+        \centering
+        \begin{itemize}
+            \item Flying 1000 ions
+            \item Circle distribution start point along x-axis
+            \item Cone direction distribution (5°) along z-axis
+            \item Kinetic energy 10keV, acceleration of 10keV
+            \item Extract $x_i$, $x_i'$, $x_f$, $x_f'$ for each ion
+        \end{itemize}
+    \end{textblock*}
+    \begin{textblock*}{0.5\paperwidth}(0.02\paperwidth,0.3\paperheight)
+			\centering
+			\includegraphics[width=.9\textwidth]{Exercises_presentation/images/SimionScreenshot.png}
+		\end{textblock*}
+  
+\end{frame}
+
+\begin{frame}{Description of Transfer Matrix}
+    \begin{textblock*}{0.5\paperwidth}(0.425\paperwidth,0.2\paperheight)
+        \centering
+        \begin{equation*}
+            \begin{pmatrix}x_f \\ x_f'\end{pmatrix} = M_\text{drift  } M_\text{gap  } M_\text{drift  } \cdot \begin{pmatrix}x_i \\ x_i'\end{pmatrix}
+        \end{equation*}
+        
+        \begin{equation*}
+            \begin{pmatrix}x_f \\ x_f'\end{pmatrix} = \begin{pmatrix} a_{11} & a_{12}\\  a_{21} & a_{22}\end{pmatrix} \cdot \begin{pmatrix}x_i \\ x_i'\end{pmatrix}
+        \end{equation*}
+
+        \begin{equation}
+            x_f = a_{11} x_i +  a_{12} x_i  
+        \end{equation}
+        \begin{equation}
+            x_f' = a_{21} x_i +  a_{22} x_i 
+        \end{equation}
+            
+    \end{textblock*}
+    \begin{textblock*}{0.5\paperwidth}(0.\paperwidth,0.35\paperheight)
+			\centering
+			\includegraphics[width=.8\textwidth]{ibs_logo.pdf}
+		\end{textblock*}
+  
+\end{frame}
+
+\begin{frame}{Extraction of Transfer Matrix Elements $a_{ij}$}
+    \begin{textblock*}{0.5\paperwidth}(0.02\paperwidth,0.25\paperheight)
+			\centering
+			\includegraphics[width=.9\textwidth]{Exercises_presentation/images/FirstCoord_Eq.pdf}
+            \begin{equation*}
+                \frac{x_f}{x_i'} = a_{11}\frac{x_i}{x_i'} + a_{12}
+            \end{equation*}
+		\end{textblock*}
+    \begin{textblock*}{0.5\paperwidth}(0.52\paperwidth,0.25\paperheight)
+			\centering
+			\includegraphics[width=.9\textwidth]{Exercises_presentation/images/SecondCoord_Eq.pdf}
+            \begin{equation*}
+                \frac{x_f'}{x_i} = a_{22}\frac{x_i'}{x_i} + a_{12}
+            \end{equation*}
+		\end{textblock*}
+  
+\end{frame}
+
+
+\begin{frame}{Transfer Matrix Calculation}
+    \begin{textblock*}{0.5\paperwidth}(0.425\paperwidth,0.2\paperheight)
+        \centering
+        \begin{equation*}
+            \begin{pmatrix}x_f \\ x_f'\end{pmatrix} = M_\text{drift  } M_\text{gap  } M_\text{drift  } \cdot \begin{pmatrix}x_i \\ x_i'\end{pmatrix}
+        \end{equation*}
+        Drift matrix $M_\text{drift  }$: 
+        \begin{equation*}
+            \begin{pmatrix}x_f \\ x_f'\end{pmatrix} \xrightarrow{\text{Drift length tube S}} \begin{pmatrix} x_f + x_f' S \\ x_f'\end{pmatrix}
+        \end{equation*}
+
+        \begin{equation*}
+            M_\text{drift  } = \begin{pmatrix} 1 & S \\ 0 & 1 \end{pmatrix}, \quad  M_\text{drift  }^{-1} = \begin{pmatrix} 1 & -S \\ 0 & 1 \end{pmatrix}
+        \end{equation*}
+
+            
+    \end{textblock*}
+    \begin{textblock*}{0.5\paperwidth}(0.\paperwidth,0.35\paperheight)
+		\centering
+		\includegraphics[width=.8\textwidth]{Exercises_presentation/images/ibs_logo_2.pdf}
+	\end{textblock*}
+
+\end{frame}
+
+\begin{frame}{Transfer Matrix Calculation}
+    \begin{textblock*}{0.5\paperwidth}(0.425\paperwidth,0.27\paperheight)
+        \centering
+        Result from fit to simulation Ddata:
+        \begin{equation*}
+            M_\text{drift  } M_\text{gap  } M_\text{drift  } = \begin{pmatrix} 1.022 & 0.151 \\ \approx 0 & 0.707 \end{pmatrix}
+        \end{equation*}
+
+        with drift Length $S=50$\,mm
+
+         \vspace{0.1\paperheight}
+        
+        Multiplying with $M_\text{drift  }^{-1}$ from both sides yields: 
+
+        \begin{equation*}
+            M_\text{gap  } = \begin{pmatrix} 1.022 & 86.310  \\ \approx 0 & 0.707 \end{pmatrix}
+        \end{equation*}
+
+            
+    \end{textblock*}
+    \begin{textblock*}{0.5\paperwidth}(0.\paperwidth,0.35\paperheight)
+		\centering
+		\includegraphics[width=.8\textwidth]{Exercises_presentation/images/ibs_logo.pdf}
+	\end{textblock*}
+  
+
+\end{frame}
+
 \end{document}
