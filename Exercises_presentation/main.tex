@@ -1,8 +1,8 @@
 %Title: Beamer Presentation Template
 %Author: LISA
 %Year: 2020
-
 \documentclass[10pt,aspectratio=169]{beamer}
+
 
  
  
@@ -51,7 +51,24 @@
 \end{SectionTitle}
 
 \begin{frame}{Setting up the calculations}
-sdjkghjeofds
+    \begin{textblock*}{0.45\paperwidth}(0.05\paperwidth,0.18\paperheight)
+        \centering
+        \only<1>{\includegraphics[width=1.\textwidth]{initialization.png}}%
+        \only<2>{\includegraphics[width=1.\textwidth]{nil8compile.png}}%
+        \only<3>{\includegraphics[width=1.\textwidth]{ev8run.png}}%
+    \end{textblock*}
+    \begin{textblock*}{0.45\paperwidth}(0.5\paperwidth,0.18\paperheight)
+        \centering
+        \small
+        \begin{itemize}
+            \item<1-> Creation of working directories and move of the source files into them. 
+            \item<1-> Creation of param8.h input file
+            \item<2-> Creation of a temporary directory for each isotope
+            \item<2-> Copy of the nil8 template data file into each folder and substitution of the neutron number 
+            \item<2-> nil8 parallel execution
+            \item<3-> Same as before but for ev8
+        \end{itemize}
+    \end{textblock*}
 \end{frame}
 
 \begin{frame}{$^{238}$U EV8 calculations - Iterations}
@@ -85,12 +102,13 @@ sdjkghjeofds
         % \centering
         \only<1>{
             \centering
+            \textbf{$^{238}$U}\\
             \textbf{Prolate}\\
             Binding energy = 7520.3 [keV/A]\\
             \textbf{Oblate}\\
             Binding energy = 7474.9 [keV/A]\\
             \textbf{Experiment}\\
-            Binding energy = 7570.126(6) [keV/A]
+            Binding energy = 7570.126(6) [keV/A] \footnote<1>{Nuclear Data Sheets 127, 191 (2015)}
         }
         \only<2>{
             \begin{itemize}
@@ -218,10 +236,10 @@ sdjkghjeofds
         \end{equation*}
 
         \begin{equation}
-            x_f = a_{11} x_i +  a_{12} x_i  
+            x_f = a_{11} x_i +  a_{12} x'_i  
         \end{equation}
         \begin{equation}
-            x_f' = a_{21} x_i +  a_{22} x_i 
+            x_f' = a_{21} x_i +  a_{22} x'_i 
         \end{equation}
             
     \end{textblock*}
